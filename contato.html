@@ -27,19 +27,22 @@
 
             <form>
                 <label for="nome">Nome:</label> <br>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id="txtNome">
+                </div>
                 <br>
                 <label for="email">E-mail:</label> <br>
-                <input type="email" id="email">
-                <br>
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail">
+                </div>
                 <br>
                 <label for="assunto">Assunto:</label> <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="6"></textarea>
-                <br>
+                <textarea name="assunto" id="assunto" cols="60" rows="6" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto">
+                </div>
                 <br>
 
-                <button>Enviar</button>
+                <button onclick="enviar()">Enviar</button>
         </div>
         </form>
         <div class="ml">
@@ -47,7 +50,7 @@
             <p>São Paulo - SP</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3429886492618!2d-46.690021385383105!3d-23.59202906860976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57437c0e96ab%3A0xe48b0f3dfa40cda9!2sXP%20Investimentos!5e0!3m2!1spt-BR!2sbr!4v1629136724424!5m2!1spt-BR!2sbr"
-                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa" ></iframe>
 
         </div>
     </div>
@@ -71,6 +74,8 @@
             Todos os direitos reservados: Gabriel Reis &copy;
         </p>
     </footer>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
